@@ -29,6 +29,5 @@ public class _06_charAt_Method {
 
         System.out.println("End of the program");
 
-
     }
 }

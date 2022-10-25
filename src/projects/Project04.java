@@ -19,26 +19,34 @@ public class Project04 {
 
         String sentence = ScannerHelper.getASentence().trim();
 
-        int firstWordEnd = 0;
-        int lastWordStart = 0;
+//        int firstWordEnd = 0;
+//       int lastWordStart = 0;
+//
+//        for (int i = 0; i < sentence.length(); i++) {
+//            if (sentence.charAt(i) == ' '){
+//                firstWordEnd += i;
+//                break;
+//            }
+//        }
+//        for (int i = sentence.length() - 1; i >= 0; i--) {
+//            if (sentence.charAt(i) == ' '){
+//                lastWordStart += i;
+//                break;
+//            }
+//        }
+//
+//        String modifiedString = str.substring(lastWordStart) + str.substring(firstWordEnd, lastWordStart + 1) + str.substring(0, firstWordEnd);
+//        System.out.println(modifiedString);
 
-        for (int i = 0; i < sentence.length(); i++) {
-            if (sentence.charAt(i) == ' '){
-                firstWordEnd += i;
-                break;
-            }
+        if (sentence.contains(" ")){
+            String fWord = sentence.substring(0, sentence.indexOf(" "));
+            String lWord = sentence.substring(sentence.lastIndexOf(" ") + 1);
+
+            System.out.println(lWord + sentence.substring(sentence.indexOf(" "), sentence.lastIndexOf(" ") + 1) + fWord);
         }
-        for (int i = sentence.length() - 1; i >= 0; i--) {
-            if (sentence.charAt(i) == ' '){
-                lastWordStart += i;
-                break;
-            }
+        else{
+            System.out.println("This sentence does not have 2 or more word to swap");
         }
-
-        String modifiedString = str.substring(lastWordStart) + str.substring(firstWordEnd, lastWordStart + 1) + str.substring(0, firstWordEnd);
-        System.out.println(modifiedString);
-
-
 
         System.out.println("\n---------------Task-3------------\n");
 
