@@ -1,3 +1,5 @@
+package casting;
+
 public class Exercise7_CalculateAbsoluteDifference {
     public static void main(String[] args) {
 
