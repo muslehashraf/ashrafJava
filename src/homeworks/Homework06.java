@@ -60,7 +60,10 @@ public class Homework06 {
 
         boolean containsPluto = false;
         for (String cartoon : task5Cartoons){
-            if (!containsPluto && cartoon.contains("Pluto"))containsPluto = true;
+            if (cartoon.contains("Pluto")){
+                containsPluto = true;
+                break;
+            }
         }
         System.out.println(containsPluto);
 
@@ -100,23 +103,20 @@ public class Homework06 {
 
         System.out.println(Arrays.toString(task8Chars));
 
-        int task8LetterCount = 0;
+
         int task8UppercaseCount = 0;
         int task8LowercaseCount = 0;
         int task8digitsCount = 0;
         int task8specialsCount = 0;
 
         for (char character : task8Chars){
-            if (Character.isLetter(character)) {
-                task8LetterCount++;
-                if (Character.isUpperCase(character)) task8UppercaseCount++;
-                else if (Character.isLowerCase(character)) task8LowercaseCount++;
-            }
+            if (Character.isUpperCase(character)) task8UppercaseCount++;
+            else if (Character.isLowerCase(character)) task8LowercaseCount++;
             else if (Character.isDigit(character))task8digitsCount++;
-            else task8specialsCount++;
+            else if(character != ' ')task8specialsCount++;
         }
 
-        System.out.println("Letter = " + task8LetterCount);
+        System.out.println("Letter = " + (task8LowercaseCount + task8UppercaseCount));
         System.out.println("Uppercase letters = " + task8UppercaseCount);
         System.out.println("Lowercase letters = " + task8LowercaseCount);
         System.out.println("digits = " + task8digitsCount);
