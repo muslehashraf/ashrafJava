@@ -68,8 +68,8 @@ public class Project05 {
                 break;
             }
         }
-        System.out.println("Smallest = " + secondMin);
-        System.out.println("Greatest = " + secondMax);
+        System.out.println("Second smallest = " + secondMin);
+        System.out.println("Second greatest = " + secondMax);
     }
     public static void findSecondGreatestAndSmallest(int[] numbers){
         int min = Integer.MAX_VALUE;
