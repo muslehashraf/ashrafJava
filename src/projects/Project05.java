@@ -95,7 +95,6 @@ public class Project05 {
             if (str[i].equals(str[j])) System.out.println(str[i]);
             }
         }
-
     }
     public static void findMostRepeatedElementInAnArray(String[] str){
         int finalCount = 0;
@@ -116,7 +115,5 @@ public class Project05 {
             }
         }
         System.out.println(strWord);
-
     }
-
 }
