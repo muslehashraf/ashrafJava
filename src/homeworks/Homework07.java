@@ -98,7 +98,7 @@ public class Homework07 {
 
         for (String kitchen : task8Kitchen){
             if (Character.isUpperCase(kitchen.charAt(0)))uppercase++;
-            if (Character.isLowerCase(kitchen.charAt(0)))lowercase++;
+            else if (Character.isLowerCase(kitchen.charAt(0)))lowercase++;
             if (kitchen.toLowerCase().contains("p"))containsP++;
             if (kitchen.toLowerCase().startsWith("p") || kitchen.toLowerCase().endsWith("p"))startsEndWithP++;
         }
@@ -117,7 +117,7 @@ public class Homework07 {
         System.out.println(task10Numbers);
         for (int num : task10Numbers){
             if (num % 10 == 0)divided10++;
-            if (num % 2 == 0 && num > 15)evenGreater15++;
+            if (num > 15 && num % 2 == 0)evenGreater15++;
             if (num % 2 == 1 && num < 20)oddLess20++;
             if (num < 15 || num > 50)less15Greater50++;
         }
