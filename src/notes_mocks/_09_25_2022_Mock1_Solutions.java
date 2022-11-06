@@ -1,12 +1,9 @@
-package casting;
+package notes_mocks;
 
 import java.util.Scanner;
 
-public class Mock1 {int i1 = 3, i2 = 6, i3 = 10;
-
-
-
-        public static void main(String[] arge){
+public class _09_25_2022_Mock1_Solutions {
+        public static void main(String[] args){
            int i1 = 3, i2 = 6, i3 = 10;
             int max1 = Math.max(Math.max(i1, i2), i3);
 

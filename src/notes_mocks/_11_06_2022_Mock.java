@@ -1,4 +1,4 @@
-package notes_mock;
+package notes_mocks;
 
 public class _11_06_2022_Mock {
     /*
@@ -7,17 +7,17 @@ public class _11_06_2022_Mock {
         Smart phones will handle it :)
         10 AM to 1 PM
         45 minutes
-        Java
+        Java:
             -Array-ArrayList-LinkedList-Vector
             -Primitives
             -String
             -Casting
             -Loops
-        Soft skills
+        Soft skills:
             -GIT commands - merge conflict resolution
             -CLI Linux commands
             -User story - test case - test scenario - edge cases - boundary - positive and negatives
-        Whiteboard
+        Whiteboard:
             -String methods, loops, array - arraylist
             -Codingbat (String1, Array1, Warmup1), reverse, fibonacci, counting elements, find max, find min, second max, second min, sum, product
         QUESTIONS:

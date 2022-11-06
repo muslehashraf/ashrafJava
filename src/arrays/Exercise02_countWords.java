@@ -27,7 +27,7 @@ public class Exercise02_countWords {
 //        System.out.println(countS + 1);
 
         System.out.println("----------split method-------------");
-        System.out.println(sentence.split(" ") .length);
+        System.out.println(sentence.split(" ").length);
 
 
 

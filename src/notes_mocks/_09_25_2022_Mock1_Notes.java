@@ -1,6 +1,6 @@
-package notes_mock;
+package notes_mocks;
 
-public class _09_25_2022_Mock {
+public class _09_25_2022_Mock1_Notes {
     /*
             MOCK INTERVIEW 1
             Duration: 30 minutes

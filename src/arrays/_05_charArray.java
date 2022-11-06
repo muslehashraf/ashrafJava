@@ -75,7 +75,6 @@ public class _05_charArray {
         for(char character : characters){
             System.out.println(character);
         }
-
         /*
         TASK-5
         Print each element that are letters

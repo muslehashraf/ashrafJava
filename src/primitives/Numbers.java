@@ -3,24 +3,24 @@ package primitives;
 public class Numbers {
     public static void main(String[] args) {
         System.out.println();
-   /*
-There are 6 primitives used to store numbers as data
-byte, short, int, long -> used to store absolute numbers like 3
-float, double -> used for floating numbers like 10.5
+           /*
+        There are 6 primitives used to store numbers as data
+        byte, short, int, long -> used to store absolute numbers like 3
+        float, double -> used for floating numbers like 10.5
 
-byte    -> 1 byte
-short   -> 2 bytes
-int     -> 4 bytes
-long    -> 8 bytes
+        byte    -> 1 byte
+        short   -> 2 bytes
+        int     -> 4 bytes
+        long    -> 8 bytes
 
-NOTE: Most of the case we use int and it is enough
-John
-his age -> 45
-his fav number = 150
-his balance -> 400.45
- */
+        NOTE: Most of the case we use int and it is enough
+        John
+        his age -> 45
+        his fav number = 150
+        his balance -> 400.45
+         */
 
-// dataType variableName = value;
+        // dataType variableName = value;
 
         System.out.println("\n---------Numbers - byte-short-int-long-------\n");
         byte age = 45;
@@ -31,13 +31,13 @@ his balance -> 400.45
         System.out.println(favNumber); // 70
 
 
-/*
-Floating numbers
-float  -> 4 bytes
-double -> 8 bytes
+        /*
+        Floating numbers
+        float  -> 4 bytes
+        double -> 8 bytes
 
-NOTE: Most of the case we use double
- */
+        NOTE: Most of the case we use double
+         */
 
         System.out.println("\n---------Floating Numbers - float - double-------\n");
 

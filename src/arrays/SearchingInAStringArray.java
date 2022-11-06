@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class SearchingInASStringArray {
+public class SearchingInAStringArray {
     public static void main(String[] args) {
 
         String[] objects = {"Remote", "Mouse", "Mouse", "Keyboard", "iPad"};

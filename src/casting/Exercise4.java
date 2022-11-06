@@ -13,6 +13,5 @@ public class Exercise4 {
         System.out.println(String.valueOf('A') + "a"); // Aa
         System.out.println("" + 10.5 + 5); // "10.5" + 5 -> 10.55
 
-
     }
 }
