@@ -1,6 +1,8 @@
 package arraylist_linkedlist_vector;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class _02_StringArrayList {
     public static void main(String[] args) {
@@ -99,5 +101,8 @@ public class _02_StringArrayList {
 
         System.out.println(cities);
         System.out.println(cities.size());
+
+
+
     }
 }
