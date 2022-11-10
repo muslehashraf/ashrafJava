@@ -1,5 +1,7 @@
 package regex;
 
+import utilities.ScannerHelper;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +15,7 @@ public class MatcherClass {
         int counter = 0;
 
 
-        while(matcher.find()){
+        while (matcher.find()) {
             counter++;
             System.out.println(matcher.group());
             System.out.println(matcher.start());
@@ -32,38 +34,16 @@ public class MatcherClass {
         matcher = pattern.matcher(sentence);
         int wordCount = 0;
 
-        while(matcher.find()){
+        while (matcher.find()) {
             System.out.println(matcher.group());
             wordCount++;
         }
-        System.out.println("This sentence contains "+ wordCount +" words");
+        System.out.println("This sentence contains " + wordCount + " words");
 
 
+        pattern = Pattern.compile("[a-zA-Z0-9-_]{9,15}");
+        String str = ScannerHelper.getAString();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(Pattern.matches(pattern.toString(), str));
     }
-
 }
