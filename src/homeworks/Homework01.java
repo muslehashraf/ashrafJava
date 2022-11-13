@@ -88,7 +88,7 @@ public class Homework01 {
 
         int myAge = 18; //I can use byte, short, or long as well but int is the most common
         int myFavoriteNumber = 7;
-        String myHeight = "6'4"; //double myHeight = 6.4
+        String myHeight = "6'3"; //double myHeight = 6.3
         double myWeight = 185.0; // can use float but double is more common
         char myFavoriteCharacter = '$';
 

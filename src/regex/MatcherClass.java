@@ -45,5 +45,19 @@ public class MatcherClass {
         String str = ScannerHelper.getAString();
 
         System.out.println(Pattern.matches(pattern.toString(), str));
+
+
+        String REGEX = "(a*b)(foo)";
+        String INPUT = "aabfooaabfooabfoob";
+
+        pattern = Pattern.compile(REGEX);
+
+        // get a matcher object
+        matcher = pattern.matcher(INPUT);
+
+        if (matcher.find()) {
+            //Prints the number of capturing groups in this matcher's pattern.
+            System.out.println("Group Count: " + matcher.groupCount());
+        }
     }
 }
