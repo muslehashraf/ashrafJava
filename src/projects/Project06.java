@@ -21,7 +21,7 @@ public class Project06 {
         System.out.println(validatePassword(task3));
 
         System.out.println("\n================Task4================");
-        String task4 = "abcd@gmail.com";
+        String task4 = "abcd@gmailcom";
         System.out.println(validateEmailAddress(task4));
 
     }
@@ -64,13 +64,11 @@ public class Project06 {
     }
     public static boolean validateEmailAddress(String email){
 
-        Pattern pattern = Pattern.compile("\\S[a-z]{2,}@[a-z]{2,}.[a-z]{2,}");
+        Pattern pattern = Pattern.compile("\\S[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}");
         Matcher matcher = pattern.matcher(email);
 
         return matcher.matches();
     }
-
-
 
 
 
