@@ -1,6 +1,6 @@
 package notes_resume_market_prep_sessions;
 
-public class RESUME_MarketPrepSession1 {
+public class ResumeMarketPrepSession1 {
     /*
     RESUME - Market Prep Session 1
 	1. Create LinkedIn account

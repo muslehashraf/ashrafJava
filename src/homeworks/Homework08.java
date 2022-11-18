@@ -70,9 +70,9 @@ public class Homework08 {
         return str.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}");
     }
 
-    public static boolean isEmailFormatValid(String str){
+    public static boolean isEmailFormatValid(String email){
 
-        return str.matches("[a-zA-Z]{2,}@[a-zA-Z]{2,}\\.[a-zA-Z]{2,}");
+        return Pattern.matches("[\\w.$#-]{2,}@[\\w.]{2,}\\.[\\w]{2,}", email);
     }
 
 }
