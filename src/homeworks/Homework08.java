@@ -1,78 +1,103 @@
 package homeworks;
 
+
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Homework08 {
     public static void main(String[] args) {
+        System.out.println("---Task 1---");
+        System.out.println(countConsonants("hello"));
 
-        System.out.println("----------task1----------");
-        String task1 = "MY Name is samuel";
-        System.out.println(countConsonants(task1));
 
-        System.out.println("----------task2----------");
-        String task2 = "Hello, nice to meet you!!";
-        System.out.println(Arrays.toString(wordArray(task2)));
+        System.out.println("\n---Task 2---");
+        System.out.println(wordArray("Hello, nice to meet you!!"));
 
-        System.out.println("----------task3----------");
-        String task3 = "java  is    fun";
-        System.out.println(removeExtraSpaces(task3));
 
-        System.out.println("----------task4----------");
-        String task4 = "Hel, guys";
-        System.out.println(count3OrLess(task4));
+        System.out.println("\n---Task 3---");
+        System.out.println(removeExtraSpaces("java is  fun"));
 
-        System.out.println("----------task5----------");
-        String task5 = "01/21/1999";
-        System.out.println(isDateFormatValid(task5));
 
-        System.out.println("----------task6----------");
-        String task6 = "abc@gmail.com";
-        System.out.println(isEmailFormatValid(task6));
+        System.out.println("\n---Task 4---");
+        System.out.println(count3OrLess());
+
+
+        System.out.println("\n---Task 5---");
+        System.out.println(isDateFormatValid("1/21/1999"));
+
+
+        System.out.println("\n---Task 6---");
+        System.out.println(isEmailFormatValid("aj@gmail.com"));
 
     }
-
+    //Task 1
     public static int countConsonants(String str){
+        str = str.replaceAll("[^A-Za-z]", "");
+        str = str.replaceAll("[AEIOUaeiou]", "");
 
-
-        char[] letters = str.toCharArray();
-        int count = 0;
-
-        for (char letter : letters) {
-
-            if (String.valueOf(letter).matches("[^eaiouAOUIE\\ 0-9]"))count++;
-        }
-        return count;
+        return str.length();
     }
 
-    public static String[] wordArray(String str){
-
-        str = str.replaceAll("[\\W[^A-ZA-z\\S]]", "");
-
-        return str.split(" ");
+    //Task 2
+    public static String wordArray(String str){
+        str = removeExtraSpaces(str);
+        str = str.replaceAll("[^A-Za-z ]", "");
+        return Arrays.toString(str.split(" "));
     }
 
+    //Task 3
     public static String removeExtraSpaces(String str){
-
+        str = str.replaceAll("[\\s]{1,}", " ");
         return str;
     }
 
-    public static int count3OrLess(String str){
+    //Task 4
+    public static int count3OrLess(){
+        System.out.println("Please enter a sentence");
+        String str = new Scanner(System.in).nextLine();
+        int counter = 0;
 
-        str = str.replaceAll("[^\\w\\ ]", "");
+        str = str.replaceAll("[^A-Za-z ]", "");
+        String[] arr = str.split(" ");
 
-        return (int) Arrays.stream(str.split(" ")).filter(x -> x.length() < 4).count();
+        for (String s : arr) {
+            if(s.length() <= 3) counter++;
+        }
+
+        /* Other Way of completing this task
+        System.out.println("Please enter a sentence");
+        String str = new Scanner(System.in).nextLine();
+
+        str = str.replaceAll("[^A-Za-z]", "  ");
+
+        str = " " + str + " ";
+
+
+        Pattern pattern = Pattern.compile(" [A-Za-z]{1,3} ");
+        Matcher match = pattern.matcher(str);
+
+        while(match.find()){
+            counter++;
+        }
+         */
+        return counter;
     }
 
+    //Task 5
     public static boolean isDateFormatValid(String str){
+        Pattern pattern = Pattern.compile("[0-9]{2}/[0-9]{2}/[0-9]{4}");
+        Matcher matcher = pattern.matcher(str);
 
-        return str.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}");
+        return matcher.matches();
     }
 
-    public static boolean isEmailFormatValid(String email){
+    //Task 6
+    public static boolean isEmailFormatValid(String str){
+        Pattern pattern = Pattern.compile("[\\w.]{2,}@[\\w.[^_]]{2,}\\.[\\w[^_]]{2,}");
+        Matcher matcher = pattern.matcher(str);
 
-        return Pattern.matches("[\\w.$#-]{2,}@[\\w.]{2,}\\.[\\w]{2,}", email);
+        return matcher.matches();
     }
-
 }
