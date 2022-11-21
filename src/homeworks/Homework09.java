@@ -92,10 +92,5 @@ public class Homework09 {
             newString.append(new StringBuilder(task6Word).reverse().append(" "));
         }
         System.out.println(newString.substring(0, newString.length() - 1));
-
-
-
-
-
     }
 }
