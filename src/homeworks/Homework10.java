@@ -48,7 +48,7 @@ public class Homework10 {
     }
 
     public static int countA(String str){
-        return str.replaceAll("[^aA]{1,}", "").length();
+        return str.replaceAll("[^aA]+", "").length();
     }
 
     public static int countPos(ArrayList<Integer> nums){
