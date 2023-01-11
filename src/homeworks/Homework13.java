@@ -155,7 +155,7 @@ public class Homework13 {
     public static ArrayList<String> removeAndReturnCommons(ArrayList<String> list1, ArrayList<String> list2) {
         ArrayList<String> commons = new ArrayList<>();
         for (String s : list1) {
-            if (list2.contains(s)) {
+            if (list2.contains(s)){
                 commons.add(s);
                 list2.remove(s);
             }
